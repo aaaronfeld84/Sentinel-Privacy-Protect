@@ -3,7 +3,6 @@
     service_daemon.py
   /network
     interceptor.py
-  / firewall.py
   /identity
     identity_engine.py
   /ml
