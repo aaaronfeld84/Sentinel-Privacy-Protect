@@ -1,0 +1,13 @@
+/src
+  /daemon
+    service_daemon.py
+  /network
+    interceptor.py
+  /permissions
+    firewall.py
+  /identity
+    identity_engine.py
+  /ml
+    anomaly_engine.py
+  /ui
+    dashboard.py
