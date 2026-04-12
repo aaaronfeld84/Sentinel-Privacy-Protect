@@ -1,4 +1,4 @@
-# Sentinel Privacy Shield — Product Requirements Document (PRD)
+# Sentinel Privacy Protect — Product Requirements Document (PRD)
 
 ## 1. Purpose
 Create a mobile privacy defense platform that prevents:
