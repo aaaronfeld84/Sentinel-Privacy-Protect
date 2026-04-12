@@ -1,0 +1,56 @@
+# Sentinel Privacy Shield — System Architecture
+
+## 1. High-Level Overview
+The system is composed of five major components:
+
+1. Local Service Daemon
+2. Network Interception Layer
+3. Permission Firewall
+4. Synthetic Identity Engine
+5. Local ML Anomaly Engine
+
+All components operate locally with no cloud communication.
+
+## 2. Component Breakdown
+
+### 2.1 Local Service Daemon
+- Runs persistently
+- Manages all modules
+- Handles IPC between components
+
+### 2.2 Network Interception Layer
+- Implements local VPN
+- Parses outbound requests
+- Detects fingerprinting scripts
+- Blocks known surveillance endpoints
+
+### 2.3 Permission Firewall
+- Hooks into OS permission calls
+- Enforces user‑defined rules
+- Logs unauthorized attempts
+
+### 2.4 Synthetic Identity Engine
+- Generates rotating identifiers:
+  - Device model
+  - OS version
+  - User agent
+  - Screen metrics
+- Randomizes fingerprint surfaces
+
+### 2.5 ML Anomaly Engine
+- Local‑only model
+- Detects:
+  - Unusual network bursts
+  - Suspicious permission patterns
+  - Covert sensor activation
+
+## 3. Data Flow
+User → App → Sentinel Firewall → Network  
+User → App → Permission Request → Sentinel → Allow/Deny  
+Sentinel → Local Logs (Encrypted)
+
+## 4. Security Model
+- No cloud
+- No telemetry
+- No external dependencies
+- Local encryption (AES‑256)
