@@ -1,1 +1,11 @@
+from identity.identity_engine import IdentityEngine
 
+class Firewall:
+    def __init__(self):
+        self.identity = IdentityEngine()
+
+    def allow(self, user_id, permission):
+        return self.identity.user_has_permission(user_id, permission)
+
+    def block(self, user_id, permission):
+        return not self.identity.user_has_permission(user_id, permission)
