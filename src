@@ -1,10 +1,3 @@
-/src
-  /daemon
-    service_daemon.py
-  /network
-    interceptor.py
-  /identity
-    identity_engine.py
 class IdentityEngine:
     def __init__(self):
         self.users = {}
@@ -38,7 +31,3 @@ class IdentityEngine:
                 if permission in self.scopes.get(role, []):
                     return True
         return False
-  /ml
-    anomaly_engine.py
-  /ui
-    dashboard.py
